@@ -17,7 +17,7 @@ print("Available files:")
 for file in files:
     print(f"- {file}")
 
-choice = input('Choose a file (include extension): ')
+choice = input('Choose a file (include extension): ').lower()
 
 if choice not in files:
     print("File not found or not supported.")
@@ -37,7 +37,7 @@ spl_content = content.split()
 word_count = 0
 
 for i in spl_content:
-    clean_word = i.strip('.,!?')
+    clean_word = i.strip('.,!?"')
     clean_word = clean_word.lower()
     if word_choice ==  clean_word:
         word_count += 1
